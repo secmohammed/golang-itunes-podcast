@@ -1,0 +1,24 @@
+type Podcast {
+    artist: String!
+    name: String!
+    feedURL: String!
+    thumbnail: String!
+    episodesCount: Int!
+    genres: [String!]!
+}
+type Feed {
+    publishDate: String!
+    text: String!
+    title: String!
+    subtitle: String!
+    description: String!
+    image: String
+    summary: String!
+    linkURL: String!
+    duration: String!
+
+}
+type Query {
+    search(term: String!): [Podcast!]!
+    feed(feedUrl: String!): [Feed!]!
+}
